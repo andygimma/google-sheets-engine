@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170922213002) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "google_sheets_engine_sheets", force: :cascade do |t|
     t.string "url", null: false
     t.string "sheet_name", null: false
