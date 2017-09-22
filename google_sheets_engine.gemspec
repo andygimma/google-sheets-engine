@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = ["andygimma"]
   s.email       = ["andy.gimma@gmail.com"]
   # s.homepage    = "TODO"
-  # s.summary     = "TODO: Summary of GoogleSheetsEngine."
+  s.summary     = "Google Sheets companion engine"
   # s.description = "TODO: Description of GoogleSheetsEngine."
   s.license     = "MIT"
 
@@ -19,4 +19,10 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 5.1.4"
 
   s.add_development_dependency "sqlite3"
+
+  s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'capybara'
+  s.add_development_dependency 'factory_girl_rails'
+
+  s.test_files = Dir["spec/**/*"]
 end
