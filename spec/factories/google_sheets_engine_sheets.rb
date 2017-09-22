@@ -3,6 +3,6 @@ FactoryGirl.define do
     url "MyString"
     sheet_name "MyString"
     column_row 1
-    columns "MyString"
+    columns "[name, age, city]"
   end
 end

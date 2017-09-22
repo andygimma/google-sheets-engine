@@ -39,5 +39,5 @@ test:
   encoding: unicode
   database: sheets_test
   pool: 5
-  username: sheets_test
+  username: sheets
   password:

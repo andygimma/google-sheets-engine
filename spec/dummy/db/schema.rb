@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20170922213002) do
     t.string "url", null: false
     t.string "sheet_name", null: false
     t.integer "column_row", null: false
-    t.string "columns", null: false
+    t.jsonb "columns", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
