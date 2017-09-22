@@ -19,13 +19,15 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 5.1.4"
 
   s.add_development_dependency "sqlite3"
-
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'factory_girl_rails'
   s.add_development_dependency 'pg'
   s.add_development_dependency 'bootstrap', '~> 4.0.0.beta'
   s.add_development_dependency 'jquery-rails'
+  s.add_development_dependency 'simple_form'
+  s.add_development_dependency 'country_select'
+  s.add_development_dependency 'pry'
 
   s.test_files = Dir["spec/**/*"]
 end

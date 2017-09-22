@@ -6,3 +6,10 @@
     <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
   </div>
 </div>
+
+<%= simple_form_for @sheet do |f| %>
+  <%= f.input :url %>
+  <%= f.input :sheet_name %>
+  <%= f.input :column_row %>
+  <%= f.button :submit %>
+<% end %>
