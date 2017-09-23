@@ -4,7 +4,7 @@ class CreateGoogleSheetsEngineSheets < ActiveRecord::Migration[5.1]
       t.string :url, null: false
       t.string :sheet_name, null: false
       t.integer :column_row, null: false
-      t.jsonb :columns, null: false
+      t.jsonb :columns 
       t.timestamps
     end
   end

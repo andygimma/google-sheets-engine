@@ -25,7 +25,6 @@ module GoogleSheetsEngine
     # POST /sheets
     def create
       @sheet = Sheet.new(sheet_params)
-
       if @sheet.save
         redirect_to @sheet, notice: 'Sheet was successfully created.'
       else
@@ -56,7 +55,7 @@ module GoogleSheetsEngine
 
       # Only allow a trusted parameter "white list" through.
       def sheet_params
-        params.fetch(:sheet, {})
+        params.fetch(:sheet, {}).permit(:url, :sheet_name, :column_row)
       end
   end
 end

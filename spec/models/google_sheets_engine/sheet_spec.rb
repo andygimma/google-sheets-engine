@@ -16,13 +16,8 @@ module GoogleSheetsEngine
       expect(sheet).not_to be_valid
     end
 
-    it "is invalid without a sheet_name" do
+    it "is invalid without a column_row" do
       sheet = FactoryGirl.build(:google_sheets_engine_sheet, column_row: nil)
-      expect(sheet).not_to be_valid
-    end
-
-    it "is invalid without a sheet_name" do
-      sheet = FactoryGirl.build(:google_sheets_engine_sheet, columns: nil)
       expect(sheet).not_to be_valid
     end
   end

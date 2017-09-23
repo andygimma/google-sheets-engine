@@ -1,8 +1,8 @@
-require 'rails_helper'
+require 'spec_helper'
 
-RSpec.describe "sheets/new", type: :view do
+RSpec.describe "google_sheets_engine/sheets/new", type: :view do
   before(:each) do
-    assign(:sheet, Sheet.new())
+    assign(:sheet, GoogleSheetsEngine::Sheet.new())
   end
 
   it "renders new sheet form" do

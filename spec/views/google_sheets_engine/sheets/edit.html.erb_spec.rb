@@ -1,8 +1,9 @@
-require 'rails_helper'
+require 'spec_helper'
 
-RSpec.describe "sheets/edit", type: :view do
+RSpec.describe "google_sheets_engine/sheets/edit", type: :view do
+
   before(:each) do
-    @sheet = assign(:sheet, Sheet.create!())
+    @sheet = assign(:sheet, GoogleSheetsEngine::Sheet.create!(url: 'www.example.com', sheet_name: 'sheet1', column_row: 2))
   end
 
   it "renders the edit sheet form" do
