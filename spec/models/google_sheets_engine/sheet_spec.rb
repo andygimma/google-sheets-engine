@@ -12,8 +12,8 @@ module GoogleSheetsEngine
       expect(sheet).not_to be_valid
     end
 
-    it "is invalid without a sheet_name" do
-      sheet = FactoryGirl.build(:google_sheets_engine_sheet, sheet_name: nil)
+    it "is invalid without a name" do
+      sheet = FactoryGirl.build(:google_sheets_engine_sheet, name: nil)
       expect(sheet).not_to be_valid
     end
 
@@ -23,17 +23,17 @@ module GoogleSheetsEngine
     end
 
     it "is invalid when a url has the same sheet name twice" do
-      sheet_name = 'sheet_name'
-      sheet = FactoryGirl.create(:google_sheets_engine_sheet, url: 'www.example.com', sheet_name: sheet_name)
-      sheet2 = FactoryGirl.build(:google_sheets_engine_sheet, url: 'www.example.com', sheet_name: sheet_name)
+      name = 'name'
+      sheet = FactoryGirl.create(:google_sheets_engine_sheet, url: 'www.example.com', name: name)
+      sheet2 = FactoryGirl.build(:google_sheets_engine_sheet, url: 'www.example.com', name: name)
 
       expect(sheet2).not_to be_valid
     end
 
     it "is valid when two urls have the same sheet name" do
-      sheet_name = 'sheet_name'
-      sheet = FactoryGirl.create(:google_sheets_engine_sheet, url: 'www.example.com', sheet_name: sheet_name)
-      sheet2 = FactoryGirl.build(:google_sheets_engine_sheet, url: 'www.example2.com', sheet_name: sheet_name)
+      name = 'name'
+      sheet = FactoryGirl.create(:google_sheets_engine_sheet, url: 'www.example.com', name: name)
+      sheet2 = FactoryGirl.build(:google_sheets_engine_sheet, url: 'www.example2.com', name: name)
 
       expect(sheet2).to be_valid
     end

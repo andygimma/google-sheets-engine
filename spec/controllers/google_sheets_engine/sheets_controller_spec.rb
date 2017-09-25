@@ -31,7 +31,7 @@ module GoogleSheetsEngine
     # Sheet. As you add validations to Sheet, be sure to
     # adjust the attributes here as well.
     let(:valid_attributes) {
-      {url: 'www.example.com', sheet_name: Faker::Name.name, column_row: 2}
+      {url: 'www.example.com', name: Faker::Name.name, column_row: 2}
     }
 
     let(:invalid_attributes) {
@@ -102,7 +102,7 @@ module GoogleSheetsEngine
           Faker::Name.name
         }
         let(:new_attributes) {
-          {url: 'example1.com', sheet_name: new_name, column_row: 3}
+          {url: 'example1.com', name: new_name, column_row: 3}
         }
 
         it "updates the requested sheet" do
@@ -110,7 +110,7 @@ module GoogleSheetsEngine
           put :update, params: {id: sheet.to_param, sheet: new_attributes}, session: valid_session
           sheet.reload
           expect(sheet.url).to eq(new_attributes[:url])
-          expect(sheet.sheet_name).to eq(new_attributes[:sheet_name])
+          expect(sheet.name).to eq(new_attributes[:name])
           expect(sheet.column_row).to eq(new_attributes[:column_row])
         end
 
