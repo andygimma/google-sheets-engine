@@ -203,6 +203,7 @@ DEPENDENCIES
   google_sheets_engine!
   jquery-rails
   pg
+  popper_js
   pry
   rspec-rails
   simple_form

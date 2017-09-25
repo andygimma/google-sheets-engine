@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'country_select'
   s.add_development_dependency 'pry'
   s.add_development_dependency 'faker'
+  s.add_development_dependency 'popper_js'
 
   s.test_files = Dir["spec/**/*"]
 end
