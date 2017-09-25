@@ -6,6 +6,7 @@ Eventual features:
 * Create filtered views based on conditional logic.
 * Create work stations based on views. These will allow a user to see one row at a time from a view and work on that row.
 * Optionally change data in work stations, and feed it back to the view.
+* Create a service to update to a third-party API, return error rows, and let user adjust in place and send them again to the API.
 * Internationalization: Will support Spanish and English out of the box. Support for other languages to be quickly added.
 * Accessibility: Will be a first-class feature. We want a score of 100 using Google's [accessibility developer tools](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb) audit, and well-constructed UI.
 * Responsive design.
