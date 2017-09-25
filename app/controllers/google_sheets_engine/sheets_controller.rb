@@ -55,7 +55,7 @@ module GoogleSheetsEngine
 
       # Only allow a trusted parameter "white list" through.
       def sheet_params
-        params.fetch(:sheet, {}).permit(:url, :sheet_name, :column_row)
+        params.fetch(:sheet, {}).permit(:url, :name, :column_row)
       end
   end
 end

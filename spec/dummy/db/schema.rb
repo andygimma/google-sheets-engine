@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20170922213002) do
 
   create_table "google_sheets_engine_sheets", force: :cascade do |t|
     t.string "url", null: false
-    t.string "sheet_name", null: false
+    t.string "name", null: false
     t.integer "column_row", null: false
     t.jsonb "columns"
     t.datetime "created_at", null: false
